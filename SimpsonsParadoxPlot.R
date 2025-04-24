@@ -36,6 +36,6 @@ plot.factor <- ggplot2::ggplot(
 ggplot2::ggsave(
   "./Downloads/simponsparadox.png",
   plot = plot.agg + plot.factor,
-  width = 8,
-  height = 4,
+  width = 10,
+  height = 2.5,
   units = "in")
