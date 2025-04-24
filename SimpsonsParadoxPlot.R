@@ -16,10 +16,12 @@ df <- na.omit(palmerpenguins::penguins)
 plot.agg <- ggplot2::ggplot(df, aes(x = bill_length_mm, y = bill_depth_mm)) +
   ggplot2::geom_point() +
   ggplot2::geom_smooth(method = "lm", se = FALSE) +
-  theme_classic() +
-  theme(
+  ggplot2::theme_classic() +
+  ggplot2::theme(
     legend.position = "none",
-    axis.title = element_blank())
+    axis.text = ggplot2::element_blank(),
+    axis.ticks = ggplot2::element_blank(),
+    axis.title = ggplot2::element_blank())
 
 # Generate plot with a linear regression through each species
 plot.factor <- ggplot2::ggplot(
@@ -27,10 +29,12 @@ plot.factor <- ggplot2::ggplot(
     aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
   ggplot2::geom_point() +
   ggplot2::geom_smooth(method = "lm", se = FALSE) +
-  theme_classic() +
-  theme(
+  ggplot2::theme_classic() +
+  ggplot2::theme(
     legend.position = "none",
-    axis.title = element_blank())
+    axis.text = ggplot2::element_blank(),
+    axis.ticks = ggplot2::element_blank(),
+    axis.title = ggplot2::element_blank())
 
 # Save plots
 ggplot2::ggsave(
